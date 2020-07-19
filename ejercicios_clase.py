@@ -27,6 +27,7 @@ def ej1():
 
     potencia_2 = lambda x: 2*x
     pot_3 = potencia_2(3)
+    # Inovetip: La potencia sería x**2 :D
 
     # 2)
     # Utilice la función map para mapear una lambda expression
@@ -41,6 +42,7 @@ def ej1():
     numeros = [1, -5, 4, 3]
     numeros_lambda = list(map(lambda x: 2*x, numeros))
     print(numeros_lambda)
+    # Inovetip: numeros_lambda = list(map(lambda x: 2**x, numeros))
 
     # numeros_potencia = list(map....)
 
@@ -52,6 +54,10 @@ def ej2():
     # (len) de un string pasado como parámetro
 
     palabras_len = len(palabras)
+    # Inovetip: No estas aplicando la expresión lambda, tampoco 
+    # inicializando "palabras" antes de aplicar el len()
+    # ejemplo : len_str = lambda x: len(x) , es poco práctico
+    # pero es para ejercitar 
 
     # 2)
     # List de string
@@ -85,6 +91,7 @@ def ej3():
     # Utilizar comprensión de listas para generar essa lista
 
     tabla_5 = [x**5 for x in range(50)]
+    # Inovetip: Acá te sobro un *
 
     # 3)
     # Generar una lista a partir de comprensión de listas,
@@ -110,7 +117,12 @@ def ej4():
     list_numeros_str = ['5', '-2', '3', '', '7', 'NaN']
     
     lista_numeros_int = [int(x) if x.lstrip("+-").isdigit() is True else 0 for x in list_numeros_str]
-    
+    # Inovetip: Para que no te quede tan largo podes partir 
+    # la línea en partes, así:
+    #  lista_numeros_int = [int(x) if x.lstrip(
+    #     "+-").isdigit() is True else 0 for x in list_numeros_str] 
+
+	
     #for numero in list_numeros_str:
 	#if numero !="" and numero != "NaN":
 	#	print(int(numero))
@@ -134,7 +146,10 @@ def ej5():
     # comprendido en dicho rango pasó por ese molinete
 
     personal_1_10 = list(filter(lambda n: n < 11 != 0, accesos))
+    # Inovetip: Impecable uso de lambda!
+    # Fijate de hacerlo por compresión de listas.
 
+	
     # 2)
     # Generar una lista por comprensión de la listas "accesos"
     # cuyo ID de personal esté dentro de los ID válidos para ingresar
@@ -155,6 +170,9 @@ def ej6():
     # el cual este acotado entre 0 y 1000
     # De dicho array calcular las siguientes operaciones:
     rango = 1000
+    # Inovetip: rango = 1001  para que incluya al 1000 :D
+
+	
     # 1)
     # Calcular la suma de todos los elementos en el array
 
